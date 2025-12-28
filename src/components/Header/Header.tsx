@@ -12,7 +12,7 @@ import useWindowSize from "./useWindowSize";
 import scan_logo_green from "../../assets/scan_logo_green.svg";
 import scan_logo_white from "../../assets/scan_logo_white.svg";
 import fallout_menu_icon from "../../assets/fallout_menu_icon.svg";
-import close_icon from "../../assets/closing-icon.svg";
+import close_icon from "../../assets/closing_icon.svg";
 
 interface HeaderProps {
   isLoggedIn: boolean;
