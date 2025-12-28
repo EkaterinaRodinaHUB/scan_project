@@ -1,7 +1,7 @@
 {
   "name": "scan-project",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "vite",
@@ -38,5 +38,17 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"
-  }
+  },
+  "description": "Финальный проект",
+  "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EkaterinaRodinaHUB/scan_project.git"
+  },
+  "author": "Ekaterina Rodina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EkaterinaRodinaHUB/scan_project/issues"
+  },
+  "homepage": "https://github.com/EkaterinaRodinaHUB/scan_project#readme"
 }
