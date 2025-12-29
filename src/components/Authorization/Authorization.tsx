@@ -46,7 +46,7 @@ const Authorization: React.FC<AuthorizationProps> = () => {
             return false;
         }
         if (!/^[a-zA-Z0-9_]+$/.test(input)) {
-            setUsernameError("Только буквы и цифры");
+            setUsernameError("Некорректный логин");
             return false;
         }
         setUsernameError(null);
