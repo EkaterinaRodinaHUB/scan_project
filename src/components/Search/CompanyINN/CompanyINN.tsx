@@ -27,13 +27,15 @@ const CompanyINN: React.FC<CompanyINNProps> = ({
     if (!inn.length) {
       errorObj.code = 1;
       errorObj.message = "Обязательное поле";
-    } else if (!/^\d+$/.test(inn)) {
+    } else if (!/\d{10,12}/.test(inn)) {
       errorObj.code = 2;
       errorObj.message = "Введите корректные данные";
-    } else if ([10, 12].indexOf(inn.length) === -1) {
+    } 
+    else if ([10, 12].indexOf(inn.length) === -1) {
       errorObj.code = 3;
       errorObj.message = "Введите корректные данные";
-    } else {
+    } 
+    else {
       const checkDigit = (inn: string, coefficients: number[]): number => {
         let n = 0;
         for (let i = 0; i < coefficients.length; i++) {
