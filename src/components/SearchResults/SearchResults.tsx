@@ -48,7 +48,7 @@ const SearchResults: React.FC<SearchResultsProps> = () => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+              "Authorization": `Bearer ${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify(searchParams),
             credentials: "omit",
@@ -67,7 +67,7 @@ const SearchResults: React.FC<SearchResultsProps> = () => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+              "Authorization": `Bearer ${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify(searchParams),
             credentials: "omit",
@@ -93,7 +93,7 @@ const SearchResults: React.FC<SearchResultsProps> = () => {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+              "Authorization": `Bearer ${localStorage.getItem("accessToken")}`,
             },
             body: JSON.stringify({ ids: publicationIds }),
             credentials: "omit",

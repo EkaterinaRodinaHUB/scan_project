@@ -33,8 +33,8 @@ const UserActions: React.FC<UserActionsProps> = ({
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            Accept: "application/json",
-            Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            "Accept": "application/json",
+            "Authorization": `Bearer ${localStorage.getItem("accessToken")}`,
           },
         });
 

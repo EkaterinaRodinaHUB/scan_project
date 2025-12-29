@@ -45,7 +45,7 @@ const Authorization: React.FC<AuthorizationProps> = () => {
             setUsernameError("Минимум 3 символа");
             return false;
         }
-        if (!/^[a-zA-Z0-9]+$/.test(input)) {
+        if (!/^[a-zA-Z0-9_]+$/.test(input)) {
             setUsernameError("Только буквы и цифры");
             return false;
         }
@@ -93,7 +93,7 @@ const Authorization: React.FC<AuthorizationProps> = () => {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        Accept: "application/json",
+                        "Accept": "application/json",
                     },
                     body: JSON.stringify({
                         login: username,
