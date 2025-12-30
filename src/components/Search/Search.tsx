@@ -92,6 +92,8 @@ const Search: React.FC = () => {
             targetSearchEntities: [
               {
                 type: "company",
+                sparkId: null,
+                entityId: null,
                 inn: companyINN,
                 maxFullness: checkboxStates.maxCompleteness,
               },

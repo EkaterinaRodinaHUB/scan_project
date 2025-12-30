@@ -59,18 +59,13 @@ const Authorization: React.FC<AuthorizationProps> = () => {
             setPasswordError("Пароль обязателен");
             return false;
         }
-        const hasLetter = /[a-zA-Z]/.test(input);
-        const hasDigit = /\d/.test(input);
+        const correctInput = /[a-zA-Z\d+/]/.test(input);
         if (input.length < 6) {
             setPasswordError("Минимум 6 символов");
             return false;
         }
-        if (!hasLetter) {
+        if (!correctInput) {
             setPasswordError("Нужна хотя бы одна буква");
-            return false;
-        }
-        if (!hasDigit) {
-            setPasswordError("Нужна хотя бы одна цифра");
             return false;
         }
         setPasswordError(null);

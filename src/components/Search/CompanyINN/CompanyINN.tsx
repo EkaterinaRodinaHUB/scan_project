@@ -27,13 +27,13 @@ const CompanyINN: React.FC<CompanyINNProps> = ({
     if (!inn.length) {
       errorObj.code = 1;
       errorObj.message = "Обязательное поле";
-    } else if (!/\d{10,12}/.test(inn)) {
+    } else if (!/\d/.test(inn)) {
       errorObj.code = 2;
-      errorObj.message = "Введите корректные данные";
+      errorObj.message = "ИНН может состоять только из цифр";
     } 
     else if ([10, 12].indexOf(inn.length) === -1) {
       errorObj.code = 3;
-      errorObj.message = "Введите корректные данные";
+      errorObj.message = "ИНН может состоять только из 10 или 12 цифр";
     } 
     else {
       const checkDigit = (inn: string, coefficients: number[]): number => {
@@ -76,7 +76,7 @@ const CompanyINN: React.FC<CompanyINNProps> = ({
       }
       if (!result) {
         errorObj.code = 4;
-        errorObj.message = "Введите корректные данные";
+        errorObj.message = "Неправильное контрольное число";
       }
     }
 

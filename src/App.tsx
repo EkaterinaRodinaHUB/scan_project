@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
@@ -46,7 +46,7 @@ function App() {
         />
         <Routes>
           <Route
-            path="/"
+            path="/*"
             element={<Main isLoggedIn={isLoggedIn} userTariff={userTariff} />}
           />
           <Route path="/auth" element={<Authorization />} />
